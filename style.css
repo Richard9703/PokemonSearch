@@ -33,6 +33,7 @@ header input {
     border-radius: 3px;
     padding: 0.5rem;
     margin: 0 0 0 2.4rem;
+    font-family: inherit;
 }
 
 header button {
@@ -40,6 +41,8 @@ header button {
     border: none;
     color: #467599;
     font-size: 1.4rem;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .category-container {
