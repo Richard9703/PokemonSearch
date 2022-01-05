@@ -71,9 +71,9 @@ header button {
 
 .category-icons li img {
     object-fit: cover;
-    height: 100px;
+    height: 84px;
     width: 100px;
-    padding: 0.5rem;
+    padding: 0.1rem;
 }
 
 .category-icons li span {
@@ -109,7 +109,7 @@ header button {
     font-family: 'Roboto', sans-serif;
 }
 
-.content-main img {
+#image {
     height: 100%;
     width: 100%;
     object-fit: cover;
