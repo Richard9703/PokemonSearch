@@ -124,9 +124,9 @@ header button {
     background-color: #9DBBD2;
 }
 
-.content-body h4 {
-    margin: 0;
-    background-color: #9DBBD2;
+.fish-name {
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
 

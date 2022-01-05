@@ -15,9 +15,9 @@
 	<div class="main-container">
 		<!--Main container-->
 		<header>
-			<input type="text" placeholder="Search here..">
+			<input type="text" id="search" placeholder="Search here..">
 			<!--Search box-->
-			<button id="search"><i class="fas fa-search"></i></button>
+			<button id="search-btn"><i class="fas fa-search"></i></button>
 			<!--Search icon-->
 		</header>
 		<div class="category-container">
@@ -50,14 +50,14 @@
 		</div>
 		<div class="contents">
 			<div class="content">
-				<span class="fish" id="fishname"></span>
-				<span class="fish" id="price"></span>
+				
 				<div class="content-main">
-					
+					<img id="image">
 				</div>
 				<div class="content-body">
-					<img id="image">
-					<button id= "btnClick" class="content-btn active"><i class="fas fa-heart"></i></button>
+					<span class="fish-name" id="fishname"></span>
+					<span class="price" id="price"></span>
+					<button class="content-btn active"><i class="fas fa-heart"></i></button>
 				</div>
 			</div>
 		</div>
