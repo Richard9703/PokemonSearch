@@ -1,25 +1,12 @@
-const url = "https://acnhapi.com/v1a/fish/{fishID}"
-getFish();
+console.log('Fish image');
 
-//Function Search by ID + Term
-async function getFish() {
-    const resp = await fetch(
-        'https://acnhapi.com/v1a/fish/1'
-    ).data;
-    const respData = await resp.json();
+catchFish().catch(error => {
+    console.log('No Fish');
+});
 
-
-    console.log(getFish.fish[0]);
+async function catchFish() {
+    const response = await fetch('https://acnhapi.com/v1/images/fish/1');
+    const blob = await response.blob();
+    document.getElementById('fish').src = URL.createObjectURL(blob);
 }
 
-async function getContentId(id) {
-    const content = await fetch(
-        'https://acnhapi.com/v1a/fish/{fishID}' + id
-    );
-}
-
-async function getContentSearch(term) {
-    const contents = await fetch(
-        'https://acnhapi.com/v1a/fish/{fishID}/name/name-USen' + term
-    );
-}

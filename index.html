@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Search Bar</title>
-		<link rel="stylesheet" href="style.css">
-		<script src="https://kit.fontawesome.com/f9678945c0.js" crossorigin="anonymous"></script>
-		<script src="script.js" defer></script>
-		</head>
-	<body>
-		<div class="main-container">
-			<header>
-				<input type="text" placeholder="Search here..">
-				<button id="search"><i class="fas fa-search"></i></button>
-			</header>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Search Bar</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/f9678945c0.js" crossorigin="anonymous"></script>
+	<script src="script.js" defer></script>
+</head>
+
+<body>
+	<div class="main-container">
+		<!--Main container-->
+		<header>
+			<input type="text" placeholder="Search here..">
+			<!--Search box-->
+			<button id="search"><i class="fas fa-search"></i></button>
+			<!--Search icon-->
+		</header>
 		<div class="category-container">
+			<!--Category section-->
 			<h3>Category</h3>
-				<ul class="category-icons">
-					<li>
-						<img src="https://i.pinimg.com/originals/a1/21/ca/a121ca63cc13faff4afb74a452e09af2.png" 
+			<ul class="category-icons">
+				<!--Category icons-->
+				<li>
+					<img src="https://i.pinimg.com/originals/a1/21/ca/a121ca63cc13faff4afb74a452e09af2.png"
 						alt="fish icon">
-						<span>Fish</span>
-					</li>
-
-					<li>
-						<img src="https://static.thenounproject.com/png/3159423-200.png"
-						alt="fossil icon">
-						<span>Fossils</span>
-					</li>
-
-					<li>
-						<img src="https://cdn-icons-png.flaticon.com/512/103/103410.png" 
-						alt="painting icon">
-						<span>Paintings</span>
-					</li>
-					<li>
-						<img src="https://icon-library.com/images/box-icon-png/box-icon-png-0.jpg" 
-						alt="items icon">
-						<span>Paintings</span>
-					</li>
-					<li>
-						<img src="https://cdn-icons.flaticon.com/png/512/2951/premium/2951344.png?token=exp=1641237541~hmac=24576e0d161ad6dfd077e880840f16ec" 
-						alt="painting icon">
-						<span>Paintings</span>
-					</li>
-				</ul>
-			</div>
-			<div class="content-container">
-				<div class="content">
-					<div class="content-main">
-						<span class="fish">Fish Name</span>
-						<img src="https://vignette.wikia.nocookie.net/animalcrossing/images/e/e9/Nh-bitterling.jpg/revision/latest?cb=20200331062501" alt="">
-					</div>
-					<div class="content-body">
-						<h4>Bitterling</h4>
-						<button class="content-btn"><i class="fas fa-heart"></i></button>
-					</div>
+					<span>Fish</span>
+				</li>
+				<!-- <li>
+					<img src="https://static.thenounproject.com/png/3159423-200.png" alt="fossil icon">
+					<span>Fossils</span>
+				</li>
+				<li>
+					<img src="https://cdn-icons-png.flaticon.com/512/103/103410.png" alt="painting icon">
+					<span>Paintings</span>
+				</li>
+				<li>
+					<img src="https://icon-library.com/images/box-icon-png/box-icon-png-0.jpg" alt="items icon">
+					<span>Paintings</span>
+				</li>
+				<li>
+					<img src="https://static.thenounproject.com/png/3412531-200.png" alt="painting icon">
+					<span>Paintings</span>
+				</li> -->
+			</ul>
+		</div>
+		<div class="contents">
+			<div class="content">
+				<div class="content-main">
+					<span class="fish">Fish Name</span>
+					<img src="" id="fish" alt="bitterling">
+				</div>
+				<div class="content-body">
+					<h4>Bitterling</h4>
+					<button class="content-btn active"><i class="fas fa-heart"></i></button>
 				</div>
 			</div>
-		</div>	
-	</body>
+		</div>
+	</div>
+</body>
+
 </html>
