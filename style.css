@@ -74,12 +74,12 @@ header button {
 
 .category-icons li img {
     object-fit: cover;
-    height: 100x;
+    height: 100px;
     width: 100px;
 }
 
 .category-icons li span {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
