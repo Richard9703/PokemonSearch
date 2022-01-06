@@ -5,6 +5,10 @@ function searchFilm(query) {
         .then((jsonData) => {
             const results = jsonData.map(element => element.title);
             renderResults(results);
+            document.getElementById("errorMessage").innerHTML = "";
+    })
+    .catch((error) => {
+        document.getElementById("errorMessage").innerHTML = error;
     });
 }
 
@@ -18,10 +22,20 @@ function renderResults(results) {
     });
 }
 
+let searchTimeoutToken = 0;
+
 window.onload = () => {
     const searchFieldElement = document.getElementById("searchField");
     searchFieldElement.onkeyup = (event) => {
-       searchFilm(searchFieldElement.value);
+        clearTimeout(searchTimeoutToken);
+
+        if(searchFieldElement.value.length === 0) {
+            return; 
+        }
+
+        searchTimeoutToken = setTimeout(() => {
+            searchFilm(searchFieldElement.value);
+        }, 250);
     };
 }
 
