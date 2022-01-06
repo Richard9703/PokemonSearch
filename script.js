@@ -1,3 +1,4 @@
+
 function searchFilm(query) {
     const url = `https://ghibliapi.herokuapp.com/films?q=${query}`;
     fetch(url)
