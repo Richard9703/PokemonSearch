@@ -9,6 +9,7 @@ function searchFilm(query) {
     })
     .catch((error) => {
         document.getElementById("errorMessage").innerHTML = error;
+        renderResults([]);
     });
 }
 
