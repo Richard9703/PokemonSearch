@@ -45,6 +45,9 @@ form input, form button {
 
 ul {
     list-style: none;
-}
+    text-align: center;
+    justify-content: center;
+    padding-right: 1rem;
+}  
 
 

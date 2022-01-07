@@ -5,7 +5,9 @@ function searchFilm(query) {
         .then(response => response.json())
         .then((jsonData) => {
             const results = jsonData.map(element => element.title);
-            renderResults(results);
+            const description = jsonData.map(element => element.description);
+            renderResults(results, description);
+
             document.getElementById("errorMessage").innerHTML = "";
     })
     .catch((error) => {
@@ -18,9 +20,14 @@ function renderResults(results) {
     const list = document.getElementById("resultsList");
     list.innerHTML = "";
     results.forEach(result => {
-        const element = document.createElement("li");
-        element.innerText = result;
-        list.appendChild(element);
+        const li = document.createElement("li");
+        const desc = document.createElement("p")
+
+        li.innerText = result;
+        desc.innerText = result;
+
+        li.appendChild(desc);
+        list.appendChild(li);
     });
 }
 
