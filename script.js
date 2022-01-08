@@ -1,27 +1,29 @@
-
-
 function searchFilm(query) {
     const url = `https://ghibliapi.herokuapp.com/films?q=${query}`;
+ 
     fetch(url)
         .then(response => response.json())
         .then((jsonData) => {
-            const results = jsonData.map(element => element.title);
-            
-            renderResults(results, );
+            const movies = jsonData.map(element => element.title);
+
+            renderMovies(movies);
 
             document.getElementById("errorMessage").innerHTML = "";
     })
     .catch((error) => {
         document.getElementById("errorMessage").innerHTML = error;
-        renderResults([]);
+        renderMovies([]);
     });
 }
 
-function renderResults(results) {
+
+function renderMovies(movie) {
     const list = document.getElementById("resultsList");
-    list.innerHTML = "";
-    results.forEach(result => {
+    
+    movie.forEach(result => {
         const li = document.createElement("li");
+        
+        
         
         li.innerText = result;
         
