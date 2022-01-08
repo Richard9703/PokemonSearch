@@ -43,8 +43,8 @@ form input, form button {
     color: #8DA9C4;
 }
 
-ul {
-    list-style: none;
+.filmBox {
+    padding: 1rem;
     text-align: center;
     justify-content: center;
     padding-right: 1rem;

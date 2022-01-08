@@ -1,42 +1,36 @@
-function searchFilm(query) {
-    const url = `https://ghibliapi.herokuapp.com/films?q=${query}`;
- 
-    fetch(url)
-        .then(response => response.json())
-        .then((jsonData) => {
-            const movies = jsonData.map(element => element.title);
+document.querySelector('#search').addEventListener("click" , searchFilm);
 
-            renderMovies(movies);
 
-            document.getElementById("errorMessage").innerHTML = "";
+
+function searchFilm(e) {
+   
+    const title = document.querySelector("#filmName").value;
+    
+
+    fetch(`https://ghibliapi.herokuapp.com/films/${title}`)
+    .then((response) => response.json())
+    .then((films) => {
+        document.querySelector(".filmBox").innerHTML = `
+        <div>
+			<img src="${films.image}" 
+            alt="${films.title}" />
+		</div>
+		<div class="filmDescription">
+			<h1>${films.title}</h1>
+			<p>Description: ${films.description}</p>
+		</div>
+        `;
     })
     .catch((error) => {
         document.getElementById("errorMessage").innerHTML = error;
-        renderMovies([]);
     });
-}
 
-
-function renderMovies(movie) {
-    const list = document.getElementById("resultsList");
-    
-    movie.forEach(result => {
-        const li = document.createElement("li");
-        
-        
-        
-        li.innerText = result;
-        
-
-        
-        list.appendChild(li);
-    });
 }
 
 let searchTimeoutToken = 0;
 
 window.onload = () => {
-    const searchFieldElement = document.getElementById("searchField");
+    const searchFieldElement = document.getElementById("filmName");
     searchFieldElement.onkeyup = (event) => {
         clearTimeout(searchTimeoutToken);
 
