@@ -1,29 +1,39 @@
+// When pressing the search icon, it will search for user input
 document.querySelector('#search').addEventListener("click" , searchPokemon);
 
+// Capitalize the first letter of the string
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+// Lower case the rest of the string
 function lowerCaseName(string) {
-    return string.lowerCaseName();
+    return string.toLowerCase();
 }
 
+//Search for pokemon
 function searchPokemon(e) {
    
-    const name = document.querySelector("#pokeName");
-    
+    const name = document.querySelector("#pokeName").value;
+    const pokemonName = lowerCaseName(name);
 
-    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+
+    // Fetch url of API
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     .then((response) => response.json())
     .then((data) => {
-            document.querySelector(".pokeBox").innerHTML = `
-            <div>
-                <img src="${data.sprites.other["official-artwork"].front_default}" 
-                alt="${capitalizeFirstLetter(data.name)}" />
-            </div>
-            <div class="filmDescription">
-                <h1>${capitalizeFirstLetter(data.name)}</h1>
-                <p>Weight: ${data.weight}</p>
+            document.querySelector(".pokeCard").innerHTML = `
+            <div class = container>
+                <div class = card>
+                    <div class = image>
+                        <img src ="${data.sprites.other["official-artwork"].front_default}"
+                        alt="${capitalizeFirstLetter(data.name)}">
+                    </div>
+                    <div class = content>
+                        <h3>${capitalizeFirstLetter(data.name)}</h3>
+                        <p>Weight: ${data.weight}</p>
+                    </div>
+                </div>    
             </div>
             `;
              })
@@ -34,22 +44,5 @@ function searchPokemon(e) {
         }   
 
 
- 
-// let searchTimeoutToken = 0;
-
-// window.onload = () => {
-//     const searchFieldElement = document.getElementById("pokeName");
-//     searchFieldElement.onkeyup = (event) => {
-//         clearTimeout(searchTimeoutToken);
-
-//         if(searchFieldElement.value.length === 0) {
-//             return; 
-//         }
-
-//         searchTimeoutToken = setTimeout(() => {
-//             searchFilm(searchFieldElement.value);
-//         }, 250);
-//     };
-// }
 
 
