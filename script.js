@@ -1,4 +1,4 @@
-// When pressing the search icon, it will search for user input
+// When pressing the search icon or enter, it will search for the user input
 document.querySelector('#search').addEventListener("click" , searchPokemon);
 
 // Capitalize the first letter of the string
@@ -22,7 +22,8 @@ function searchPokemon(e) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
     .then((response) => response.json())
     .then((data) => {
-            document.querySelector(".pokeCard").innerHTML = `
+        // Create elements in selected query
+            document.querySelector(".pokeCard").innerHTML = ` 
             <div class = container>
                 <div class = card>
                     <div class = image>
@@ -39,6 +40,7 @@ function searchPokemon(e) {
             </div>
             `;
              })
+             //log errors
             .catch((error) => {
              console.log(error);
             });
