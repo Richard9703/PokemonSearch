@@ -32,6 +32,8 @@ function searchPokemon(e) {
                     <div class = content>
                         <h3>${capitalizeFirstLetter(data.name)}</h3>
                         <p>Weight: ${data.weight}</p>
+                        <p>Abilities: ${capitalizeFirstLetter(data.abilities["0"].ability.name)},</p>
+                        <p>Type: ${capitalizeFirstLetter(data.types[0].type.name)}</p>
                     </div>
                 </div>    
             </div>
