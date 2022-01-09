@@ -1,47 +1,53 @@
 document.querySelector('#search').addEventListener("click" , searchFilm);
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
+function lowerCaseName(string) {
+    return string.lowerCaseName();
+}
 
 function searchFilm(e) {
    
-    const title = document.querySelector("#filmName").value;
+    const name = document.querySelector("#pokeName").value;
     
 
-    fetch(`https://ghibliapi.herokuapp.com/films/${title}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then((response) => response.json())
-    .then((films) => {
-        document.querySelector(".filmBox").innerHTML = `
-        <div>
-			<img src="${films.image}" 
-            alt="${films.title}" />
-		</div>
-		<div class="filmDescription">
-			<h1>${films.title}</h1>
-			<p>Description: ${films.description}</p>
-		</div>
-        `;
-    })
-    .catch((error) => {
-        document.getElementById("errorMessage").innerHTML = error;
-    });
+    .then((data) => {
+            document.querySelector(".pokeBox").innerHTML = `
+            <div>
+                <img src="${data.sprites.other["official-artwork"].front_default}" 
+                alt="${capitalizeFirstLetter(data.name)}" />
+            </div>
+            <div class="filmDescription">
+                <h1>${capitalizeFirstLetter(data.name)}</h1>
+                <p>Weight: ${data.weight}</p>
+            </div>
+            `;
+             })
+            .catch((error) => {
+             console.log(error);
+            });
+            e.preventDefault();
+        }   
+ 
+// let searchTimeoutToken = 0;
 
-}
+// window.onload = () => {
+//     const searchFieldElement = document.getElementById("pokeName");
+//     searchFieldElement.onkeyup = (event) => {
+//         clearTimeout(searchTimeoutToken);
 
-let searchTimeoutToken = 0;
+//         if(searchFieldElement.value.length === 0) {
+//             return; 
+//         }
 
-window.onload = () => {
-    const searchFieldElement = document.getElementById("filmName");
-    searchFieldElement.onkeyup = (event) => {
-        clearTimeout(searchTimeoutToken);
-
-        if(searchFieldElement.value.length === 0) {
-            return; 
-        }
-
-        searchTimeoutToken = setTimeout(() => {
-            searchFilm(searchFieldElement.value);
-        }, 250);
-    };
-}
+//         searchTimeoutToken = setTimeout(() => {
+//             searchFilm(searchFieldElement.value);
+//         }, 250);
+//     };
+// }
 
 
