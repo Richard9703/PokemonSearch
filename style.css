@@ -42,7 +42,8 @@ form input, form button {
 
 /* individual css for inupt */
 form input {
-    border-bottom-left-radius: 1rem;
+    border-bottom-left-radius: 0.3rem;
+    border-top-left-radius: 0.3rem;
     outline: none;
 }
 
@@ -130,6 +131,11 @@ form input {
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease-in-out;
+}
+
+.container .card .content p {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /* texts reveal after hovering */
