@@ -20,7 +20,7 @@ body {
     overflow-x: hidden;
 } 
 
-p {
+.mainp {
     font-size: 1rem;
     color: white;
     text-align: center;
@@ -100,9 +100,9 @@ form input {
 .container .card {
     position: relative;
     max-width: 100%;
-    height: 200px;
+    height: 1150px;
     background-color: #fff;
-    margin: 30px 10px;
+    margin: 20px 5px;
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
@@ -152,6 +152,8 @@ form input {
     opacity: 1;
     transition-delay: 0.2s;
 }
+
+/* Footer */
 
 /* For media screens 320px and lower */
 @media only screen and (min-width: 320px) {
