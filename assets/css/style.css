@@ -327,10 +327,6 @@ footer {
         transition: 0.3s ease-in-out;
         border-radius: 15px;
     }
-    footer {
-        padding-top: 10px;
-        margin-top: 50px;
-    }
     .footer-bottom {
         padding: 10px;
     }
