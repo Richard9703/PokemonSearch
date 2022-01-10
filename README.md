@@ -65,7 +65,7 @@ I wanted to make a search/filter. I looked at a few APIs to use which would allo
 - API issues and understanding queries 
  
 ## Deployement
-The website has been deployed in GitHub
+The website has been deployed in GitHub. 
 - Go to Respository..
 - Then Settings..
 - Select Master Branch..
