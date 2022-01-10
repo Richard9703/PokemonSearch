@@ -1,5 +1,5 @@
 // When pressing the search icon or enter, it will search for the user input
-document.querySelector('#search').addEventListener("click" , searchPokemon);
+document.querySelector("#search").addEventListener("click", searchPokemon);
 
 // Capitalize the first letter of the string
 function uppercaseFirstLetter(string) {
@@ -13,16 +13,14 @@ function lowerCaseName(string) {
 
 //Search for pokemon
 function searchPokemon(e) {
-   
     const name = document.querySelector("#pokeName").value;
     const pokemonName = lowerCaseName(name);
 
-
     // Fetch url of API
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
-    .then((response) => response.json())
-    .then((data) => {
-        // Create elements in selected query
+        .then((response) => response.json())
+        .then((data) => {
+            // Create elements in selected query
             document.querySelector(".pokeCard").innerHTML = ` 
             <div class = container>
                 <div class = card>
@@ -39,14 +37,10 @@ function searchPokemon(e) {
                 </div>    
             </div>
             `;
-             })
-             //log errors
-            .catch((error) => {
-             console.log(error);
-            });
-            e.preventDefault();
-        }   
-
-
-
-
+        })
+        //log errors
+        .catch((error) => {
+            console.log(error);
+        });
+    e.preventDefault();
+}
