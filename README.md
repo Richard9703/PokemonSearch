@@ -6,4 +6,6 @@ The website is a simple Pokémon search. It will show the pokemon image, name, a
 I wanted to make a search/filter. I looked at a few APIs to use which would allow me to create what I wanted. I used a variety of APIs to test such as Studio Ghibli API, Animal Crossing: NH API and an Anime/Manga list API. 
 
 ## Features 
-When you first open the website. You will be able to see a search bar. 
+When you first open the website. You will be greeted with the navbar and a search bar. There will be an instruction on how to use the website. 
+![image](https://user-images.githubusercontent.com/91730394/148722363-333b60f9-6ff0-4fa2-b34a-bbe0767bc7a7.png)
+
