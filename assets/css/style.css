@@ -203,7 +203,7 @@ form input {
 
 /* Footer */
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -271,7 +271,7 @@ footer {
 .footer-bottom {
     background: #fff;
     width: 100vw;
-    padding: 20px;
+    padding: 5px;
     padding-bottom: 40px;
     text-align: center;
     display: flex;
@@ -332,7 +332,7 @@ footer {
         margin-top: 50px;
     }
     .footer-bottom {
-        padding: 50px;
+        padding: 10px;
     }
 }
 
@@ -472,18 +472,14 @@ footer {
 @media only screen and (max-width: 912px) {
     footer {
         position: relative;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #111;
-        height: auto;
-        width: 100vw;
+        background: #6c7e93;
         padding-top: 10px;
         color: #fff;
         margin-top: 46rem;
     }
     .footer-bottom {
-        background: #000;
+        background: #fff;
+        color: #0b2545;
         width: 100vw;
         text-align: center;
         display: flex;
