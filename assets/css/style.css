@@ -7,18 +7,66 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html {
-    overflow-x: hidden;
-}
- 
 
 body {
     background-color: #0B2545;
-    color: white;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
 } 
+
+/* Navbar */
+.nav-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+    height: 80px;
+    border-radius: 0 0 15px 15px;
+    padding: 0 25px;
+    z-index: 2;   
+    background: #fff;
+    box-shadow: 0 1px 2px #0B2545;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+.nav-tabs {
+    display: flex;
+    font-weight: bold;
+    font-size: 18px;
+    list-style: none;
+}
+
+.nav-tab:not(:last-child) {
+    padding: 10px 25px;
+    margin: 0;
+    border-right: 1px solid #eee;
+}
+
+.nav-tab:last-child {
+    padding: 10px 0 0 25px;
+}
+
+.nav-tab, .menu-btn {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
 
 .mainp {
     font-size: 1rem;
@@ -28,9 +76,10 @@ body {
 }
 
 /* main header */
-header {
-    font-size: 1.2rem;
+header h1 {
+    font-size: 2rem;
     padding-top: 1.5rem;
+    color: #fff;
 }
 
 header, form {
@@ -119,12 +168,11 @@ form input {
 /* image in the card container */
 .container .card .image {
     position: relative;
-    width: 100%!;
-    min-width: 450px!;
-    height: auto;
-    top: -2%;
+    width: 100%;
+    min-width: 450px;
+    top: -10px;
     box-shadow: 0 5px 20px #0B2545;
-    border-radius: 1rem;
+    border-radius: 10px;
     z-index: 1;
 }
 
@@ -154,6 +202,16 @@ form input {
 }
 
 /* Footer */
+ footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #fff;
+    text-align: center;
+ 
+ }
 
 /* For media screens 320px and lower */
 @media only screen and (min-width: 320px) {
@@ -161,9 +219,9 @@ form input {
         font-size: 0.8rem;
     }
     .container .card .image {
-        width: 100%!;
+        width: 100%;
         min-width: 90px;
-        height: auto!;
+        height: auto;
         top: -2%;
         box-shadow: 0 5px 20px #0B2545;
         border-radius: 1rem;
@@ -177,7 +235,7 @@ form input {
         max-width: 100%;
         height: 500px;
         background-color: #fff;
-        margin: 30px 30px 30px 30px;
+        margin: 30px;
         padding: 20px 15px;
         display: flex;
         flex-direction: column;
@@ -203,7 +261,7 @@ form input {
         max-width: 100%;
         height: 500px;
         background-color: #fff;
-        margin: 30px 30px 30px 30px;
+        margin: 30px;
         padding: 20px 15px;
         display: flex;
         flex-direction: column;
@@ -213,8 +271,8 @@ form input {
     }
 }
 
-/* For media screens 820px and below */
-@media  only screen and (max-width: 820px) {
+/* For media screens 800px and below */
+@media  only screen and (max-width: 800px) {
     header {
         padding-top: 1rem;
     }
@@ -227,7 +285,7 @@ form input {
         max-width: 100%;
         height: 500px;
         background-color: #fff;
-        margin: 30px 30px 30px 30px;
+        margin: 30px;
         padding: 20px 15px;
         display: flex;
         flex-direction: column;
@@ -235,7 +293,98 @@ form input {
         transition: 0.3s ease-in-out;
         border-radius: 15px;
     }
+
+    .nav-container {
+		position: fixed;
+		display: none;
+		overflow-y: auto;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		width: 280px;
+		height: 100%;
+		background: #fff;
+		box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
+	}
+
+	.nav-tabs {
+		flex-direction: column;
+		align-items: flex-end;
+		margin-top: 80px;
+		width: 100%;
+	}
+
+	.nav-tab:not(:last-child) {
+		padding: 20px 25px;
+		margin: 0;
+		border-right: unset;
+		border-bottom: 1px solid #f5f5f5;
+	}
+
+	.nav-tab:last-child {
+		padding: 15px 25px;
+	}
+
+	.menu-btn {
+		position: relative;
+		margin: 0;
+		width: 20px;
+		height: 15px;
+		cursor: pointer;
+		z-index: 2;
+		padding: 30px;
+		border-radius: 20px;
+	}
+
+	.menu-btn .menu {
+		display: block;
+		width: 100%;
+		height: 5px;
+		border-radius: 1px;
+		background: #0B2545;
+	}
+
+	.menu-btn .menu:nth-child(2) {
+		margin-top: 4px;
+		opacity: 1;
+	}
+
+	.menu-btn .menu:nth-child(3) {
+		margin-top: 4px;
+	}
+
+	#menuToggle:checked + .menu-btn .menu {
+		transition: transform 0.2s ease;
+	}
+
+	#menuToggle:checked + .menu-btn .menu:nth-child(1) {
+		transform: translate3d(0, 6px, 0) rotate(45deg);
+	}
+
+	#menuToggle:checked + .menu-btn .menu:nth-child(2) {
+		transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+		opacity: 0;
+	}
+
+	#menuToggle:checked + .menu-btn .menu:nth-child(3) {
+		transform: translate3d(0, -6px, 0) rotate(-45deg);
+	}
+
+	#menuToggle:checked ~ .nav-container {
+		z-index: 1;
+		display: flex;
+		animation: menu-slide-left 0.3s ease;
+	}
+	@keyframes menu-slide-left {
+		0% {
+			transform: translateX(200px);
+		}
+		to {
+			transform: translateX(0);
+		}
+	}
 }
+
 
 /* For media screens above 820px  */
 @media  only screen and (min-width: 820px) {
