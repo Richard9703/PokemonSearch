@@ -1,19 +1,18 @@
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
-
 body {
-    background-color: #0B2545;
+    background-color: #0b2545;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-} 
+}
 
 /* Navbar */
 .nav-wrapper {
@@ -28,9 +27,9 @@ body {
     height: 80px;
     border-radius: 0 0 15px 15px;
     padding: 0 25px;
-    z-index: 2;   
+    z-index: 2;
     background: #fff;
-    box-shadow: 0 1px 2px #0B2545;
+    box-shadow: 0 1px 2px #0b2545;
 }
 
 .logo-container {
@@ -60,7 +59,8 @@ body {
     padding: 10px 0 0 25px;
 }
 
-.nav-tab, .menu-btn {
+.nav-tab,
+.menu-btn {
     cursor: pointer;
 }
 
@@ -82,14 +82,16 @@ header h1 {
     color: #fff;
 }
 
-header, form {
+header,
+form {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* input and button in form*/
-form input, form button {
+form input,
+form button {
     padding: 0.5rem;
     font-size: 1.2rem;
     border: none;
@@ -111,7 +113,7 @@ form input {
 
 /* search icon */
 .search-btn {
-    color: #6C7E93;
+    color: #6c7e93;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -119,21 +121,21 @@ form input {
 
 /* hover over search icon */
 .search-btn:hover {
-    background: #0B2545;
-    color: #8DA9C4;
+    background: #0b2545;
+    color: #8da9c4;
 }
 
 /* search icon fontawesome*/
 .fa-search {
-    color: #8DA9C4;
+    color: #8da9c4;
     font-size: 1.2rem;
 }
 
 /* main container targeted by javascript */
 .pokeCard {
     text-align: center;
-    justify-content: center 
-}  
+    justify-content: center;
+}
 
 /* container created in javascript*/
 .container {
@@ -155,7 +157,7 @@ form input {
     padding: 20px 15px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 5px 20px #0B2545;
+    box-shadow: 0 5px 20px #0b2545;
     transition: 0.3s ease-in-out;
     border-radius: 15px;
 }
@@ -171,7 +173,7 @@ form input {
     width: 100%;
     min-width: 450px;
     top: -10px;
-    box-shadow: 0 5px 20px #0B2545;
+    box-shadow: 0 5px 20px #0b2545;
     border-radius: 10px;
     z-index: 1;
 }
@@ -181,7 +183,7 @@ form input {
     position: relative;
     top: -10px;
     padding: 10px 15px;
-    color: #0B2545;
+    color: #0b2545;
     text-align: center;
     visibility: hidden;
     opacity: 0;
@@ -202,7 +204,7 @@ form input {
 }
 
 /* Footer */
- footer {
+footer {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -210,8 +212,7 @@ form input {
     padding: 1rem;
     background-color: #fff;
     text-align: center;
- 
- }
+}
 
 /* For media screens 320px and lower */
 @media only screen and (min-width: 320px) {
@@ -223,7 +224,7 @@ form input {
         min-width: 90px;
         height: auto;
         top: -2%;
-        box-shadow: 0 5px 20px #0B2545;
+        box-shadow: 0 5px 20px #0b2545;
         border-radius: 1rem;
         z-index: 1;
         overflow: hidden;
@@ -239,7 +240,7 @@ form input {
         padding: 20px 15px;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 5px 20px #0B2545;
+        box-shadow: 0 5px 20px #0b2545;
         transition: 0.3s ease-in-out;
         border-radius: 15px;
     }
@@ -265,20 +266,20 @@ form input {
         padding: 20px 15px;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 5px 20px #0B2545;
+        box-shadow: 0 5px 20px #0b2545;
         transition: 0.3s ease-in-out;
         border-radius: 15px;
     }
 }
 
 /* For media screens 800px and below */
-@media  only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     header {
         padding-top: 1rem;
     }
 
     #searchbox {
-        padding-top: 1rem
+        padding-top: 1rem;
     }
     .container .card {
         position: relative;
@@ -289,131 +290,130 @@ form input {
         padding: 20px 15px;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 5px 20px #0B2545;
+        box-shadow: 0 5px 20px #0b2545;
         transition: 0.3s ease-in-out;
         border-radius: 15px;
     }
 
     .nav-container {
-		position: fixed;
-		display: none;
-		overflow-y: auto;
-		z-index: -1;
-		top: 0;
-		right: 0;
-		width: 280px;
-		height: 100%;
-		background: #fff;
-		box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
-	}
+        position: fixed;
+        display: none;
+        overflow-y: auto;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2);
+    }
 
-	.nav-tabs {
-		flex-direction: column;
-		align-items: flex-end;
-		margin-top: 80px;
-		width: 100%;
-	}
+    .nav-tabs {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 80px;
+        width: 100%;
+    }
 
-	.nav-tab:not(:last-child) {
-		padding: 20px 25px;
-		margin: 0;
-		border-right: unset;
-		border-bottom: 1px solid #f5f5f5;
-	}
+    .nav-tab:not(:last-child) {
+        padding: 20px 25px;
+        margin: 0;
+        border-right: unset;
+        border-bottom: 1px solid #f5f5f5;
+    }
 
-	.nav-tab:last-child {
-		padding: 15px 25px;
-	}
+    .nav-tab:last-child {
+        padding: 15px 25px;
+    }
 
-	.menu-btn {
-		position: relative;
-		margin: 0;
-		width: 20px;
-		height: 15px;
-		cursor: pointer;
-		z-index: 2;
-		padding: 30px;
-		border-radius: 20px;
-	}
+    .menu-btn {
+        position: relative;
+        margin: 0;
+        width: 20px;
+        height: 15px;
+        cursor: pointer;
+        z-index: 2;
+        padding: 30px;
+        border-radius: 20px;
+    }
 
-	.menu-btn .menu {
-		display: block;
-		width: 100%;
-		height: 5px;
-		border-radius: 1px;
-		background: #0B2545;
-	}
+    .menu-btn .menu {
+        display: block;
+        width: 100%;
+        height: 5px;
+        border-radius: 1px;
+        background: #0b2545;
+    }
 
-	.menu-btn .menu:nth-child(2) {
-		margin-top: 4px;
-		opacity: 1;
-	}
+    .menu-btn .menu:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
 
-	.menu-btn .menu:nth-child(3) {
-		margin-top: 4px;
-	}
+    .menu-btn .menu:nth-child(3) {
+        margin-top: 4px;
+    }
 
-	#menuToggle:checked + .menu-btn .menu {
-		transition: transform 0.2s ease;
-	}
+    #menuToggle:checked + .menu-btn .menu {
+        transition: transform 0.2s ease;
+    }
 
-	#menuToggle:checked + .menu-btn .menu:nth-child(1) {
-		transform: translate3d(0, 6px, 0) rotate(45deg);
-	}
+    #menuToggle:checked + .menu-btn .menu:nth-child(1) {
+        transform: translate3d(0, 6px, 0) rotate(45deg);
+    }
 
-	#menuToggle:checked + .menu-btn .menu:nth-child(2) {
-		transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-		opacity: 0;
-	}
+    #menuToggle:checked + .menu-btn .menu:nth-child(2) {
+        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+        opacity: 0;
+    }
 
-	#menuToggle:checked + .menu-btn .menu:nth-child(3) {
-		transform: translate3d(0, -6px, 0) rotate(-45deg);
-	}
+    #menuToggle:checked + .menu-btn .menu:nth-child(3) {
+        transform: translate3d(0, -6px, 0) rotate(-45deg);
+    }
 
-	#menuToggle:checked ~ .nav-container {
-		z-index: 1;
-		display: flex;
-		animation: menu-slide-left 0.3s ease;
-	}
-	@keyframes menu-slide-left {
-		0% {
-			transform: translateX(200px);
-		}
-		to {
-			transform: translateX(0);
-		}
-	}
+    #menuToggle:checked ~ .nav-container {
+        z-index: 1;
+        display: flex;
+        animation: menu-slide-left 0.3s ease;
+    }
+    @keyframes menu-slide-left {
+        0% {
+            transform: translateX(200px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
 }
 
-
 /* For media screens above 820px  */
-@media  only screen and (min-width: 820px) {
+@media only screen and (min-width: 820px) {
     .container .card:hover {
         height: 620px;
     }
-    
+
     .container .card .image {
         position: relative;
-        width: 100%!important;
-        min-width: 450px!important;
-        height: auto!important;
+        width: 100% !important;
+        min-width: 450px !important;
+        height: auto !important;
         top: -2%;
-        box-shadow: 0 5px 20px #0B2545;
+        box-shadow: 0 5px 20px #0b2545;
         border-radius: 1rem;
         z-index: 1;
     }
-    
+
     .container .card .content {
         position: relative;
         top: -10px;
         padding: 10px 15px;
-        color: #0B2545;
+        color: #0b2545;
         text-align: center;
         visibility: hidden;
         opacity: 0;
         transition: 0.3s ease-in-out;
     }
-    
+
     .container .card:hover .content {
         margin-top: 20px;
         visibility: visible;
