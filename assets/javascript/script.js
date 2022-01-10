@@ -2,7 +2,7 @@
 document.querySelector('#search').addEventListener("click" , searchPokemon);
 
 // Capitalize the first letter of the string
-function capitalizeFirstLetter(string) {
+function uppercaseFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
@@ -28,13 +28,13 @@ function searchPokemon(e) {
                 <div class = card>
                     <div class = image>
                         <img src ="${data.sprites.other["official-artwork"].front_default}"
-                        alt="${capitalizeFirstLetter(data.name)}">
+                        alt="${uppercaseFirstLetter(data.name)}">
                     </div>
                     <div class = content>
-                        <h3>${capitalizeFirstLetter(data.name)}</h3>
+                        <h3>${uppercaseFirstLetter(data.name)}</h3>
                         <p>Weight: ${data.weight}</p>
-                        <p>Abilities: ${capitalizeFirstLetter(data.abilities["0"].ability.name)}</p>
-                        <p>Type: ${capitalizeFirstLetter(data.types[0].type.name)}</p>
+                        <p>Abilities: ${uppercaseFirstLetter(data.abilities["0"].ability.name)}</p>
+                        <p>Type: ${uppercaseFirstLetter(data.types[0].type.name)}</p>
                     </div>
                 </div>    
             </div>
