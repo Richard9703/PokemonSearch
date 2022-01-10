@@ -71,9 +71,14 @@ The website has been deployed in GitHub
 - Select Master Branch..
 - Link will be shown when deployment is complete. 
 
-Live link:
+Live link: https://richard9703.github.io/PokemonSearch/
 
-
+## Credits 
+- API used for data is [PokeAPI](https://pokeapi.co/)
+- Instruction on API and using them from [The Coding Train](https://www.youtube.com/c/TheCodingTrain)
+- Social media icons from [Fontawesome](https://fontawesome.com/)
+- Fonts from [Google Fonts](https://fonts.google.com/)
+- Direct links can be found in code for 'Pokeball logo'
 
 
 
